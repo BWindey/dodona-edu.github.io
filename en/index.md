@@ -32,4 +32,7 @@ features:
     details: Release notes and the latest news on Dodona.
     link: https://github.com/orgs/dodona-edu/discussions?discussions_q=category%3AAnnouncements+category%3A%22Release+notes%22
     linkText: View on GitHub
+  - title: API-Documentation
+    details: Documentation for developers wanting to use Dodona's API
+    link: /en/api_documentation
 ---
