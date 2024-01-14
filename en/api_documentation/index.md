@@ -13,6 +13,8 @@ If you want to build an application, tool or plugin that uses the Dodona API, pl
 - [First exploring](./first_use#explore-via-browser)
 - [Authentication](./first_use#authenticate)
 
+## All endpoints
+- [List of endpoints](./all_endpoints)
 ## Exercise
 
 

@@ -1,4 +1,7 @@
-
+| Endpoint                          | Request Methods | Privilege Level                                                                                                                                                          |
+|-----------------------------------|-----------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [/](https://dodona.be/)           | GET             | <div style="display: flex;"><img src="./red_square.svg" alt="Zeus" /> <img src="./orange_square.svg" alt="Staff" /> <img src="./green_square.svg" alt="Student" /></div> |
+| [/about](https://dodona.be/about) | GET             | <div style="display: flex;"><img src="./red_square.svg" alt="Zeus" /> <img src="./orange_square.svg" alt="Staff" /> <img src="./green_square.svg" alt="Student" /></div> |
 
 - / [GET]
 - /about [GET]
