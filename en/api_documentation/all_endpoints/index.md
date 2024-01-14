@@ -1,196 +1,195 @@
-| Endpoint                          | Request Methods | Privilege Level                                                                                                                                                          |
-|-----------------------------------|-----------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [/](https://dodona.be/)           | GET             | <div style="display: flex;"><img src="./red_square.svg" alt="Zeus" /> <img src="./orange_square.svg" alt="Staff" /> <img src="./green_square.svg" alt="Student" /></div> |
-| [/about](https://dodona.be/about) | GET             | <div style="display: flex;"><img src="./red_square.svg" alt="Zeus" /> <img src="./orange_square.svg" alt="Staff" /> <img src="./green_square.svg" alt="Student" /></div> |
+<!-- <div style="display: flex;"><img src="./red_square.svg" alt="Zeus" style="margin-right: 5px"/> <img src="./orange_square.svg" alt="Staff" style="margin-right: 5px"/> <img src="./green_square.svg" alt="Student" style="margin-right: 5px"/></div> -->
 
-- / [GET]
-- /about [GET]
-- /activities [GET]
-- /activities/{id} [PUT|PATCH|GET]
-- /activities/{id}/edit [GET]
-- /activities/{id}/inputServiceWorker.js [GET]
-- /activity_read_states [GET|POST]
-- /annotations [GET|POST]
-- /annotations/{id} [GET|PUT|PATCH|DELETE]
-- /announcements [GET|POST]
-- /announcements/new [GET]
-- /announcements/{id} [DELETE|PUT|PATCH]
-- /announcements/{id}/edit [GET]
-- /announcements/{id}/mark_as_read [POST]
-- /api_tokens/{id} [DELETE]
-- /contact [GET|POST]
-- /courses [GET|POST]
-- /courses/new [GET]
-- /courses/{course_id}/activities/{activity_id}/inputServiceWorker.js [GET]
-- /courses/{course_id}/activities/{id} [PUT|PATCH|GET]
-- /courses/{course_id}/activities/{id}/edit [GET]
-- /courses/{course_id}/activity_read_states [GET]
-- /courses/{course_id}/exercises/{id} [PUT|PATCH|GET]
-- /courses/{course_id}/exercises/{id}/edit [GET]
-- /courses/{course_id}/members [GET]
-- /courses/{course_id}/members/download_labels_csv [GET]
-- /courses/{course_id}/members/upload_labels_csv [POST]
-- /courses/{course_id}/members/{id} [PUT|PATCH|GET]
-- /courses/{course_id}/members/{id}/edit [GET]
-- /courses/{course_id}/series [GET]
-- /courses/{course_id}/series/new [GET]
-- /courses/{course_id}/series/{series_id}/activities/{activity_id}/inputServiceWorker.js [GET]
-- /courses/{course_id}/series/{series_id}/activities/{id} [PUT|PATCH|GET]
-- /courses/{course_id}/series/{series_id}/activities/{id}/edit [GET]
-- /courses/{course_id}/series/{series_id}/exercises/{id} [PUT|PATCH|GET]
-- /courses/{course_id}/series/{series_id}/exercises/{id}/edit [GET]
-- /courses/{course_id}/submissions [GET]
-- /courses/{id} [GET|PUT|PATCH|DELETE]
-- /courses/{id}/edit [GET]
-- /courses/{id}/favorite [POST]
-- /courses/{id}/ical [GET]
-- /courses/{id}/manage_series [GET]
-- /courses/{id}/mass_accept_pending [POST]
-- /courses/{id}/mass_decline_pending [POST]
-- /courses/{id}/questions [GET]
-- /courses/{id}/reorder_series [POST]
-- /courses/{id}/reset_token [POST]
-- /courses/{id}/scoresheet [GET]
-- /courses/{id}/statistics [GET]
-- /courses/{id}/subscribe [GET|POST]
-- /courses/{id}/subscribe/{secret} [GET]
-- /courses/{id}/unfavorite [POST]
-- /courses/{id}/unsubscribe [POST]
-- /courses/{id}/update_membership [POST]
-- /data [GET]
-- /evaluation_exercise/{id} [PATCH|PUT]
-- /evaluations [POST]
-- /evaluations/new [GET]
-- /evaluations/{evaluation_id}/feedbacks/{id} [PUT|PATCH|GET]
-- /evaluations/{evaluation_id}/feedbacks/{id}/edit [GET]
-- /evaluations/{evaluation_id}/score_items [POST]
-- /evaluations/{evaluation_id}/score_items/add_all [POST]
-- /evaluations/{evaluation_id}/score_items/copy [POST]
-- /evaluations/{evaluation_id}/score_items/{id} [DELETE|PUT|PATCH]
-- /evaluations/{evaluation_id}/scores [POST]
-- /evaluations/{evaluation_id}/scores/{id} [GET|PUT|PATCH|DELETE]
-- /evaluations/{id} [GET|PUT|PATCH|DELETE]
-- /evaluations/{id}/add_user [POST]
-- /evaluations/{id}/edit [GET]
-- /evaluations/{id}/export_grades [GET]
-- /evaluations/{id}/modify_grading_visibility [POST]
-- /evaluations/{id}/overview [GET]
-- /evaluations/{id}/remove_user[POST]
-- /evaluations/{id}/set_multi_user [POST]
-- /events [GET]
-- /exercises [GET]
-- /exercises/{id} [PUT|PATCH|GET]
-- /exercises/{id}/edit [GET]
-- /exports [GET]
-- /exports/courses/{id} [GET|POST]
-- /exports/series/{id} [GET|POST]
-- /exports/users/{id} [GET|POST]
-- /feedbacks/{id} [PUT|PATCH|GET]
-- /feedbacks/{id}/edit [GET]
-- /feedbacks/{id}/scores [DELETE]
-- /infoable/info [GET]     <!--Seems to not work-->
-- /institution_not_supported [GET]
-- /institutions [GET]
-- /institutions/{id} [PUT|PATCH|GET]
-- /institutions/{id}/edit [GET]
-- /institutions/{id}/merge [GET|POST]
-- /institutions/{id}/merge_changes [GET]
-- /judges [GET|POST]
-- /judges/new [GET]
-- /judges/{id} [GET|PUT|PATCH|DELETE]
-- /judges/{id}/edit [GET]
-- /judges/{id}/hook [GET|POST]
-- /judges/{judge_id}/submissions [GET]
-- /labels [GET|POST]
-- /labels/new [GET]
-- /labels/{id} [GET|PUT|PATCH]
-- /labels/{id}/edit [GET
-- /lti/content_selection [GET|POST]
-- /lti/do_redirect [GET]
-- /lti/wks [GET]
-- /lti/redirect [GET]
-- /lti/series_and_activities [GET]
-- /notifications [GET]
-- /notifications/destroy_all [DELETE]
-- /notifications/{id} [DELETE|PUT|PATCH]
-- /privacy [GET]
-- /profile [GET]
-- /programming_languages [GET|POST]
-- /programming_languages/new [GET]
-- /programming_languages/{id} [GET|PUT|PATCH|DELETE]
-- /programming_languages/{id}/edit [GET]
-- /publications [GET]
-- /questions [GET]
-- /readable/activity_read_states [GET|POST]
-- /repositories [GET|POST]
-- /repositories/new [GET]
-- /repositories/{id} [GET|PUT|PATCH|DELETE]
-- /repositories/{id}/add_admin [POST]
-- /repositories/{id}/add_course [POST]
-- /repositories/{id}/admins [GET]
-- /repositories/{id}/courses [GET]
-- /repositories/{id}/edit [GET]
-- /repositories/{id}/hook [GET|POST]
-- /repositories/{id}/public/*media [GET]
-- /repositories/{id}/remove_admin [POST]
-- /repositories/{id}/remove_course [POST]
-- /repositories/{id}/reprocess [POST]
-- /rights_requests [GET|POST]
-- /rights_requests/new [GET]
-- /rights_requests/{id}/approve [POST]
-- /rights_requests/{id}/reject [POST]
-- /saved_annotations [GET|POST]
-- /saved_annotations/new [GET]
-- /saved_annotations/{id} [GET|PUT|PATCH|DELETE]
-- /saved_annotations/{id}/edit [GET]
-- /series [POST]
-- /series/{id} [GET|PUT|PATCH|DELETE]
-- /series/{id}/add_activity [POST]
-- /series/{id}/available_activities [GET]
-- /series/{id}/edit [GET]
-- /series/{id}/mass_rejudge [POST]
-- /series/{id}overview [GET]
-- /series/{id}/remove_activity [POST]
-- /series{id}/reorder_activities [POST]
-- /series{id}/reset_token [POST]
-- /series/{id}/scoresheet [GET]
-- /series/{series_id}/activities [GET]
-- /series/{series_id}/exercises [GET]
-- /stats/cumulative_timeseries [GET]
-- /stats/heatmap [GET]
-- /stats/punchcard [GET]
-- /stats/stacked_status [GET]
-- /stats/timeseries [GET]
-- /stats/violin [GET]
-- /status [GET]
-- /submissions [GET|POST]
-- /submissions/mass_rejudge [POST]
-- /submissions/{id} [GET]
-- /submissions/{id}/download [GET]
-- /submissions/{id}/edit [GET]
-- /submissions/{id}/evaluate [GET]
-- /submissions/{id}/media/*media [GET]
-- /submissions/{submission_id}/annotations [GET|POST]
-- /submissions/{submission_id}/annotations/{id} [DELETE|PUT|PATCH]
-- /submitable/submissions [GET|POST]
-- /support-us [GET]
-- /toggle_demo_mode [POST]
-- /user/confirm_new_user [GET|POST]
-- /user/privacy_prompt [GET|POST]
-- /user/sign_in [GET]
-- /user/sign_out [DELETE]
-- /users [GET|POST]
-- /users/available_for_repository [GET]
-- /users/new [GET]
-- /users/sami/metadata [GET]
-- /users/stop_impersonating [GET]
-- /users/{id} [GET|PUT|PATCH|DELETE]
-- /users/{id}/edit [GET]
-- /users/{id}/impersonate [GET]
-- /users/{id)/token/{token} [GET]
-- /users/{user_id}/activity_read_states [GET]
-- /users/{user_id}/api_tokens [GET|POST]
-- /users/{user_id}/submissions [GET]
-- /user/users/auth/lti [GET]
-- /user/users/saml/auth [POST]
-- /{locale} [GET]
+| Endpoint                                                                                     | Request Methods         | Privilege Level |  API accessible   |
+|----------------------------------------------------------------------------------------------|-------------------------|-----------------|:-----------------:|
+| [/](https://dodona.be/)                                                                      | GET                     | 3               |                   |
+| [/about](https://dodona.be/about)                                                            | GET                     | 3               |                   |
+| [/activities](https://dodona.be/about)                                                       | GET                     | 3               |   :check_mark:    |
+| /activities/\{id\}                                                                           | PUT, PATCH, GET         | 1               |
+| /activities/\{id\}/edit                                                                      | GET                     | 1               |
+| /activities/\{id\}/inputServiceWorker.js                                                     | GET                     | 1               |
+| [/activity_read_states](https://dodona.be/activity_read_states)                              | GET, POST               | 1               |
+| [/annotations](https://dodona.be/annotations)                                                | GET, POST               | ?               |
+| /annotations/\{id\}                                                                          | GET, PUT, PATCH, DELETE | ?               |
+| [/announcements](https://dodona.be/announcements)                                            | GET, POST               | 1               |
+| [/announcements/new](https://dodona.be/announcements/new)                                    | GET                     | 1               |
+| /announcements/\{id\}                                                                        | DELETE, PUT, PATCH      | ?               |
+| /announcements/\{id\}/edit                                                                   | GET                     | 1               |
+| /announcements/\{id\}/mark_as_read                                                           | POST                    | ?               |
+| /api_tokens/\{id\}                                                                           | DELETE                  | ?               |
+| [/contact](https://dodona.be/contact)                                                        | GET, POST               | 3               |
+| [/courses](https://dodona.be/courses)                                                        | GET, POST               | 3               |
+| [/courses/new](https://dodona.be/courses/new)                                                | GET                     | 1               |
+| /courses/\{course_id\}/activities/\{activity_id\}/inputServiceWorker.js                      | GET                     | 3               |
+| /courses/\{course_id\}/activities/\{id\}                                                     | PUT, PATCH, GET         | 3               |
+| /courses/\{course_id\}/activities/\{id\}/edit                                                | GET                     | 1               |
+| /courses/\{course_id\}/activity_read_states                                                  | GET                     | 3               |
+| /courses/\{course_id\}/exercises/\{id\}                                                      | PUT, PATCH, GET         | 3               |
+| /courses/\{course_id\}/exercises/\{id\}/edit                                                 | GET                     | 1               |
+| /courses/\{course_id\}/members                                                               | GET                     | 1               |
+| /courses/\{course_id\}/members/download_labels_csv                                           | GET                     | 1               |
+| /courses/\{course_id\}/members/upload_labels_csv                                             | POST                    | ?               |
+| /courses/\{course_id\}/members/\{id\}                                                        | PUT, PATCH, GET         | 1               |
+| /courses/\{course_id\}/members/\{id\}/edit                                                   | GET                     | 1               |
+| /courses/\{course_id\}/series                                                                | GET                     | 3               |
+| /courses/\{course_id\}/series/new                                                            | GET                     | 1               |
+| /courses/\{course_id\}/series/\{series_id\}/activities/\{activity_id\}/inputServiceWorker.js | GET                     | 3               |
+| /courses/\{course_id\}/series/\{series_id\}/activities/\{id\}                                | PUT, PATCH, GET         | 3               |
+| /courses/\{course_id\}/series/\{series_id\}/activities/\{id\}/edit                           | GET                     | 1               |
+| /courses/\{course_id\}/series/\{series_id\}/exercises/\{id\}                                 | PUT, PATCH, GET         | 3               |
+| /courses/\{course_id\}/series/\{series_id\}/exercises/\{id\}/edit                            | GET                     | 1               |
+| /courses/\{course_id\}/submissions                                                           | GET                     | 3               |
+| /courses/\{id\}                                                                              | GET, PUT, PATCH, DELETE | 3               |
+| /courses/\{id\}/edit                                                                         | GET                     | 1               |
+| /courses/\{id\}/favorite                                                                     | POST                    | ?               |
+| /courses/\{id\}/ical                                                                         | GET                     | 3               |
+| /courses/\{id\}/manage_series                                                                | GET                     | 1               |
+| /courses/\{id\}/mass_accept_pending                                                          | POST                    | ?               |
+| /courses/\{id\}/mass_decline_pending                                                         | POST                    | ?               |
+| /courses/\{id\}/questions                                                                    | GET                     | 1               |
+| /courses/\{id\}/reorder_series                                                               | POST                    | ?               |
+| /courses/\{id\}/reset_token                                                                  | POST                    | ?               |
+| /courses/\{id\}/scoresheet                                                                   | GET                     | 1               |
+| /courses/\{id\}/statistics                                                                   | GET                     | 1               |
+| /courses/\{id\}/subscribe                                                                    | GET, POST               | 3               |
+| /courses/\{id\}/subscribe/\{secret\}                                                         | GET                     | 3               |
+| /courses/\{id\}/unfavorite                                                                   | POST                    | ?               |
+| /courses/\{id\}/unsubscribe                                                                  | POST                    | 3               |
+| /courses/\{id\}/update_membership                                                            | POST                    | ?               |
+| [/data](https://dodona.be/data)                                                              | GET                     | 3               |
+| /evaluation_exercise/\{id\}                                                                  | PATCH, PUT              | ?               |
+| [/evaluations](https://dodona.be/evaluations)                                                | POST                    | ?               |
+| [/evaluations/new](https://dodona.be/evaluations/new)                                        | GET                     | ?               |
+| /evaluations/\{evaluation_id\}/feedbacks/\{id\}                                              | PUT, PATCH, GET         | ?               |
+| /evaluations/\{evaluation_id\}/feedbacks/\{id\}/edit                                         | GET                     | ?               |
+| /evaluations/\{evaluation_id\}/score_items                                                   | POST                    | ?               |
+| /evaluations/\{evaluation_id\}/score_items/add_all                                           | POST                    | ?               |
+| /evaluations/\{evaluation_id\}/score_items/copy                                              | POST                    | ?               |
+| /evaluations/\{evaluation_id\}/score_items/\{id\}                                            | DELETE, PUT, PATCH      | ?               |
+| /evaluations/\{evaluation_id\}/scores                                                        | POST                    | ?               |
+| /evaluations/\{evaluation_id\}/scores/\{id\}                                                 | GET, PUT, PATCH, DELETE | ?               |
+| /evaluations/\{id\}                                                                          | GET, PUT, PATCH, DELETE | ?               |
+| /evaluations/\{id\}/add_user                                                                 | POST                    | ?               |
+| /evaluations/\{id\}/edit                                                                     | GET                     | ?               |
+| /evaluations/\{id\}/export_grades                                                            | GET                     | ?               |
+| /evaluations/\{id\}/modify_grading_visibility                                                | POST                    | ?               |
+| /evaluations/\{id\}/overview                                                                 | GET                     | ?               |
+| /evaluations/\{id\}/remove_user                                                              | POST                    | ?               |
+| /evaluations/\{id\}/set_multi_user                                                           | POST                    | ?               |
+| [/events](https://dodona.be/events)                                                          | GET                     | X               |
+| [/exercises](https://dodona.be/exercises)                                                    | GET                     | 3               |
+| /exercises/\{id\}                                                                            | PUT, PATCH, GET         | 3               |
+| /exercises/\{id\}/edit                                                                       | GET                     | 1               |
+| [/exports](https://dodona.be/exports)                                                        | GET                     | 3               |
+| /exports/courses/\{id\}                                                                      | GET, POST               | 3               |
+| /exports/series/\{id\}                                                                       | GET, POST               | 3               |
+| /exports/users/\{id\}                                                                        | GET, POST               | 3               |
+| /feedbacks/\{id\}                                                                            | PUT, PATCH, GET         | ?               |
+| /feedbacks/\{id\}/edit                                                                       | GET                     | ?               |
+| /feedbacks/\{id\}/scores                                                                     | DELETE                  | ?               |
+| [/infoable/info](https://dodona.be/infoable/info)                                            | GET                     | X               |
+| [/institution_not_supported](https://dodona.be/institution_not_supported)                    | GET                     | 3               |
+| [/institutions](https://dodona.be/institutions)                                              | GET                     | 1               |
+| /institutions/\{id\}                                                                         | PUT, PATCH, GET         | 1               |
+| /institutions/\{id\}/edit                                                                    | GET                     | 1               |
+| /institutions/\{id\}/merge                                                                   | GET, POST               | 1               |
+| /institutions/\{id\}/merge_changes                                                           | GET                     | 1               |
+| [/judges](https://dodona.be/judges)                                                          | GET, POST               | 1               |
+| [/judges/new](https://dodona.be/judges/new)                                                  | GET                     | 1               |
+| /judges/\{id\}                                                                               | GET, PUT, PATCH, DELETE | 1               |
+| /judges/\{id\}/edit                                                                          | GET                     | 1               |
+| /judges/\{id\}/hook                                                                          | GET, POST               | 1               |
+| /judges/\{judge_id\}/submissions                                                             | GET                     | 1               |
+| [/labels](https://dodona.be/labels)                                                          | GET, POST               | 3               |
+| [/labels/new](https://dodona.be/labels/new)                                                  | GET                     | 2               |
+| /labels/\{id\}                                                                               | GET, PUT, PATCH         | 3               |
+| /labels/\{id\}/edit                                                                          | GET                     | 1               |
+| [/lti/content_selection](https://dodona.be/lti/content_selection)                            | GET, POST               | ?               |
+| [/lti/do_redirect](https://dodona.be/lti/do_redirect)                                        | GET                     | ?               |
+| [/lti/wks](https://dodona.be/lti/wks)                                                        | GET                     | ?               |
+| [/lti/redirect](https://dodona.be/lti/redirect)                                              | GET                     | ?               |
+| [/lti/series_and_activities](https://dodona.be/lti/series_and_activities)                    | GET                     | ?               |
+| [/notifications](https://dodona.be/notifications)                                            | GET                     | 3               |
+| [/notifications/destroy_all](https://dodona.be/notifications/destroy_all)                    | DELETE                  | ?               |
+| /notifications/\{id\}                                                                        | DELETE, PUT, PATCH      | ?               |
+| [/privacy](https://dodona.be/privacy)                                                        | GET                     | 3               |
+| [/profile](https://dodona.be/profile)                                                        | GET                     | 3               |
+| [/programming_languages](https://dodona.be/programming_languages)                            | GET, POST               | 1               |
+| [/programming_languages/new](https://dodona.be/programming_languages/new)                    | GET                     | 1               |
+| /programming_languages/\{id\}                                                                | GET, PUT, PATCH, DELETE | 1               |
+| /programming_languages/\{id\}/edit                                                           | GET                     | 1               |
+| [/publications](https://dodona.be/publications)                                              | GET                     | 3               |
+| [/questions](https://dodona.be/questions)                                                    | GET                     | 3               |
+| [/readable/activity_read_states](https://dodona.be/readable/activity_read_states)            | GET, POST               | X               |
+| [/repositories](https://dodona.be/repositories)                                              | GET, POST               | 1               |
+| [/repositories/new](https://dodona.be/repositories/new)                                      | GET                     | 1               |
+| /repositories/\{id\}                                                                         | GET, PUT, PATCH, DELETE | 1               |
+| /repositories/\{id\}/add_admin                                                               | POST                    | 1               |
+| /repositories/\{id\}/add_course                                                              | POST                    | 1               |
+| /repositories/\{id\}/admins                                                                  | GET                     | 1               |
+| /repositories/\{id\}/courses                                                                 | GET                     | 1               |
+| /repositories/\{id\}/edit                                                                    | GET                     | 1               |
+| /repositories/\{id\}/hook                                                                    | GET, POST               | 1               |
+| /repositories/\{id\}/public/*media                                                           | GET                     | 1               |
+| /repositories/\{id\}/remove_admin                                                            | POST                    | 1               |
+| /repositories/\{id\}/remove_course                                                           | POST                    | 1               |
+| /repositories/\{id\}/reprocess                                                               | POST                    | 1               |
+| [/rights_requests](https://dodona.be/rights_requests)                                        | GET, POST               | 1               |
+| [/rights_requests/new](https://dodona.be/rights_requests/new)                                | GET                     | 1               |
+| /rights_requests/\{id\}/approve                                                              | POST                    | 1               |
+| /rights_requests/\{id\}/reject                                                               | POST                    | 1               |
+| [/saved_annotations](https://dodona.be/saved_annotations)                                    | GET, POST               | 3               |
+| [/saved_annotations/new](https://dodona.be/saved_annotations/new)                            | GET                     | 1               |
+| /saved_annotations/\{id\}                                                                    | GET, PUT, PATCH, DELETE | 1               |
+| /saved_annotations/\{id\}/edit                                                               | GET                     | 1               |
+| [/series](https://dodona.be/series)                                                          | POST                    | 1               |
+| /series/\{id\}                                                                               | GET, PUT, PATCH, DELETE | 3               |
+| /series/\{id\}/add_activity                                                                  | POST                    | 1               |
+| /series/\{id\}/available_activities                                                          | GET                     | X               |
+| /series/\{id\}/edit                                                                          | GET                     | 1               |
+| /series/\{id\}/mass_rejudge                                                                  | POST                    | 1               |
+| /series/\{id\}/overview                                                                      | GET                     | 3               |
+| /series/\{id\}/remove_activity                                                               | POST                    | 1               |
+| /series\{id\}/reorder_activities                                                             | POST                    | 1               |
+| /series\{id\}/reset_token                                                                    | POST                    | 1               |
+| /series/\{id\}/scoresheet                                                                    | GET                     | 1               |
+| /series/\{series_id\}/activities                                                             | GET                     | 3               |
+| /series/\{series_id\}/exercises                                                              | GET                     | 3               |
+| [/stats/cumulative_timeseries](https://dodona.be/stats/cumulative_timeseries)                | GET                     | X               |
+| [/stats/heatmap](https://dodona.be/stats/heatmap)                                            | GET                     | 3               |     JSON only     |
+| [/stats/punchcard](https://dodona.be/stats/punchcard)                                        | GET                     | 3               |     JSON only     |
+| [/stats/stacked_status](https://dodona.be/stats/stacked_status)                              | GET                     | X               |
+| [/stats/timeseries](https://dodona.be/stats/timeseries)                                      | GET                     | X               |
+| [/stats/violin](https://dodona.be/stats/violin)                                              | GET                     | X               |
+| [/status](https://dodona.be/status)                                                          | GET                     | 3               | External redirect |
+| [/submissions](https://dodona.be/submissions)                                                | GET, POST               | 3               |   :check_mark:    |
+| [/submissions/mass_rejudge](https://dodona.be/submissions/mass_rejudge)                      | POST                    | 1               |
+| /submissions/\{id\}                                                                          | GET                     | 3               |   :check_mark:    |
+| /submissions/\{id\}/download                                                                 | GET                     | 3               |
+| /submissions/\{id\}/edit                                                                     | GET                     | 3               |         x         |
+| /submissions/\{id\}/evaluate                                                                 | GET                     | 1               |
+| /submissions/\{id\}/media/*media                                                             | GET                     | X               |
+| /submissions/\{submission_id\}/annotations                                                   | GET, POST               | X               |
+| /submissions/\{submission_id\}/annotations/\{id\}                                            | DELETE, PUT, PATCH      | X               |
+| [/submitable/submissions](https://dodona.be/submitable/submissions)                          | GET, POST               | X               |
+| [/support-us](https://dodona.be/support-us)                                                  | GET                     | 3               |
+| [/toggle_demo_mode](https://dodona.be/toggle_demo_mode)                                      | POST                    | 1               |
+| [/user/confirm_new_user](https://dodona.be/user/confirm_new_user)                            | GET, POST               | X               |
+| [/user/privacy_prompt](https://dodona.be/user/privacy_prompt)                                | GET, POST               | X               |
+| [/user/sign_in](https://dodona.be/user/sign_in)                                              | GET                     | X               |
+| [/user/sign_out](https://dodona.be/user/sign_out)                                            | DELETE                  | X               |
+| [/users](https://dodona.be/users)                                                            | GET, POST               | 1               |
+| [/users/available_for_repository](https://dodona.be/users/available_for_repository)          | GET                     | X               |
+| [/users/new](https://dodona.be/users/new)                                                    | GET                     | 1               |
+| [/users/sami/metadata](https://dodona.be/users/sami/metadata)                                | GET                     | X               |
+| [/users/stop_impersonating](https://dodona.be/users/stop_impersonating)                      | GET                     | 1               |
+| /users/\{id\}                                                                                | GET, PUT, PATCH, DELETE | 3               |
+| /users/\{id\}/edit                                                                           | GET                     | 1               |
+| /users/\{id\}/impersonate                                                                    | GET                     | 1               |
+| /users/\{id\}/token/\{token\}                                                                | GET                     | 1               |
+| /users/\{user_id\}/activity_read_states                                                      | GET                     | 1               |
+| /users/\{user_id\}/api_tokens                                                                | GET, POST               | 3               |     JSON only     |
+| /users/\{user_id\}/submissions                                                               | GET                     | 3               |
+| [/user/users/auth/lti](https://dodona.be/user/users/auth/lti)                                | GET                     | X               |
+| [/user/users/saml/auth](https://dodona.be/user/users/saml/auth)                              | POST                    | X               |
+| /\{locale\}                                                                                  | GET                     | 3               |
