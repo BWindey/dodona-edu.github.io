@@ -28,33 +28,36 @@ Other attributes are:
 
 To get this info from a specific course, you need its id to request 'https://dodona.be/courses/{id}.json':
 ```python
+# Using featured course "The Coder's Apprentice"
+id = 296
 connection.request("GET", f"/courses/{id}", headers=headers)
 response = json.loads(connection.getresponse().read())
 
-print(response.get('id'))
-print(response.get('name'))
-print(response.get('teacher'))
+print(response.get('id'))       # 296
+print(response.get('name'))     # The Coder's Apprentice
+print(response.get('teacher'))  # Pieter Spronck
 ```
 
 ## List courses
 To get a list of all courses, you can request 'https://dodona.be/courses.json'. This will return the first 30 courses. To get more, or filter your results, you can add parameters to the url after a question mark:
-- "/courses.json?page=n"
-- "/courses.json?tab=x"
+- "?page=n"
+- "?tab=x"
 
 With "page" you can go to the page you want. To get all the pages, you can perform a GET request with the number 'n' increasing until the response is empty:
 ```python
-i = 1
+n = 1
 response = {"start": "value"}
 while response:
-    connection.request("GET", f"/courses?page={i}", headers=headers)
+    connection.request("GET", f"/courses?page={n}", headers=headers)
     response = json.loads(connection.getresponse().read())
     if response:
         print(response)
-    i += 1 
+    n += 1 
 connection.close()  
 ```
-With "tab" you can specify between "all", "featured", "institution", and "my". Those last two are user-dependant, so require you to authenticate via a token. If you don't provide an authentication token, it will default to "all"
+With "tab" you can specify between "all", "featured", "institution", and "my". Those last two are user-dependant, so they require you to authenticate via a token. If you don't provide an authentication token, or a tag, it will default to "all".
 
+You can use both tags together with "&", like `https://dodona.be/courses?tab=all&page=3`.
 
 ## Course series
 <!-- TODO: link series documentation -->

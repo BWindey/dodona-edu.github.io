@@ -1,9 +1,6 @@
 ---
 title: API Documentation
 ---
-
-[[toc]]
-
 # API Documentation
 
 In this section you'll find info on how to use the API as a developer. If you are looking for how to create an API-token, you can read that at [FAQ/api-tokens](../faq/api-tokens).
@@ -31,11 +28,11 @@ headers = {
 
 ## Permission levels
 In this documentation, permission-levels are sometimes used. Here is a list of all current permission-levels, from the lowest permissions to the highest:
-- student
-- staff
-- zeus
+1) student
+2) staff
+3) zeus
 
-Staff-members are mostly teachers. They can create and manage their own [courses](./courses) and [repositories](../guides/exercises/creating-exercises/#repository-forken). Zeus users are the Dodona admins. They can see more than anyone else, so they can keep the platform running. Features needing Zeus permissions won't be documented as well as others, as you'll likely not need them. Unless you're an actual Zeus user, but if you are, you'll mostly use the web-ui anyway.
+Staff-members are mostly teachers. They can create and manage their own [courses](./courses) and [repositories](../guides/exercises/creating-exercises/setup/#repository-forken). Zeus users are the Dodona admins. They can see more than anyone else, so they can keep the platform running. Features needing Zeus permissions won't be documented as well as others, as you'll likely not need them. Unless you're an actual Zeus user, but if you are, you'll mostly use the web-ui anyway.
 
 
 ## How to start using the API
