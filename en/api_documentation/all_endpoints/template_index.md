@@ -18,6 +18,9 @@
 | /announcements/\{id\}/mark_as_read                                                           | POST                    | ?               |
 | /api_tokens/\{id\}                                                                           | DELETE                  | ?               |
 | [/contact](https://dodona.be/contact)                                                        | GET, POST               | 3               |
+
+
+
 | [/courses](https://dodona.be/courses)                                                        | GET, POST               | 3               |
 | [/courses/new](https://dodona.be/courses/new)                                                | GET                     | 2               |
 | /courses/\{course_id\}/activities/\{activity_id\}/inputServiceWorker.js                      | GET                     | 3               |
@@ -31,7 +34,7 @@
 | /courses/\{course_id\}/members/upload_labels_csv                                             | POST                    | ?               |
 | /courses/\{course_id\}/members/\{id\}                                                        | PUT, PATCH, GET         | 2               |
 | /courses/\{course_id\}/members/\{id\}/edit                                                   | GET                     | 2               |
-| /courses/\{course_id\}/series                                                                | GET                     | 3               |
+| /courses/\{course_id\}/series                                                                | GET                     | 3               | :check_mark: |
 | /courses/\{course_id\}/series/new                                                            | GET                     | 2               |
 | /courses/\{course_id\}/series/\{series_id\}/activities/\{activity_id\}/inputServiceWorker.js | GET                     | 3               |
 | /courses/\{course_id\}/series/\{series_id\}/activities/\{id\}                                | PUT, PATCH, GET         | 3               |
@@ -56,6 +59,9 @@
 | /courses/\{id\}/unfavorite                                                                   | POST                    | ?               |
 | /courses/\{id\}/unsubscribe                                                                  | POST                    | 3               |
 | /courses/\{id\}/update_membership                                                            | POST                    | ?               |
+
+
+
 | [/data](https://dodona.be/data)                                                              | GET                     | 3               |
 | /evaluation_exercise/\{id\}                                                                  | PATCH, PUT              | ?               |
 | [/evaluations](https://dodona.be/evaluations)                                                | POST                    | ?               |
