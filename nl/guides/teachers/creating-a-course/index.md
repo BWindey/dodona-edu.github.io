@@ -12,7 +12,7 @@ Je hebt extra rechten nodig om een cursus te kunnen aanmaken. Je kan deze rechte
 
 :::
 
-Als je de nodige rechten hebt op Dodona, dan kan je eenvoudig zelf een cursus aanmaken. Dit doe je door op de knop `CURSUS AANMAKEN` te klikken in de rechterbovenhoek van het [cursusoverzicht](https://dodona.be/nl/courses). Vanaf de landingspagina bereik je dit overzicht door te klikken op `MEER CURSUSSEN...`.
+Als je de nodige rechten hebt op Dodona, dan kan je eenvoudig zelf een cursus aanmaken. Dit doe je door op de knop `Cursus aanmaken` te klikken in de rechterbovenhoek van het [cursusoverzicht](https://dodona.be/nl/courses). Vanaf de landingspagina bereik je dit overzicht door te klikken op `Meer cursussen...`.
 
 ![create course](./staff.courses_new_link.png)
 
@@ -21,6 +21,17 @@ Om een nieuwe cursus aan te maken, zijn er twee opties. Ofwel vertrek je vanaf e
 ![new course menu](./staff.course_new_options.png)
 
 ## Cursus kopiëren
+
+::: tip Snel kopiëren
+
+Als je een bestaande cursus snel wil kopiëren kan dat door onderstaande stappen te volgen.
+* Navigeer naar de cursus die je wil kopiëren.
+* Klik op de drie verticale puntjes `⋮` rechtsonder de bovenste kaart van de cursus.
+* Kies voor `Deze cursus kopiëren`.
+
+![fast copy course](./staff.course_fast_copy.png)
+
+:::
 
 Als je gekozen hebt om een bestaande cursus te kopiëren, dan krijg je een lijst van alle zichtbare cursussen op Dodona te zien. Via de zoekbalk kan je filteren om snel de gewenste cursus te vinden. Via de link-knop aan de rechterkant van de tabel open je de betreffende cursus in een nieuw venster. Zo kan je snel controleren of dit de juiste cursus is. Klik het bolletje in de linkerkolom aan om je keuze te bevestigen.
 
@@ -79,7 +90,7 @@ Finaal moet je nog enkele zaken over de cursus zelf, zoals de naam en lesgever, 
   Als je de registratieprocedure aanpast, dan blijven bestaande registraties voor de cursus gelden en blijven registratieverzoeken voor de cursus openstaan. Je moet zelf de bestaande registratiestatus van cursusgebruikers aanpassen.
   :::
 
-Eenmaal alles naar wens is ingesteld klik je op de knop `CURSUS AANMAKEN` om je cursus definitief aan te maken.
+Eenmaal alles naar wens is ingesteld klik je op de knop `Cursus aanmaken` om je cursus definitief aan te maken.
 
 Na het aanmaken van de nieuwe cursus navigeer je automatisch naar de cursuspagina, waar je kunt vaststellen dat je automatisch geregistreerd bent als cursusgebruiker en dat je aangeduid bent als cursusbeheerder.
 

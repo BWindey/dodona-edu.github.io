@@ -16,12 +16,12 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "@types/node": "^20.11.2",
+    "@types/node": "^20.11.30",
     "gray-matter": "^4.0.3",
     "markdown-it-imsize": "^2.0.1",
     "medium-zoom": "^1.1.0",
-    "resolve-accept-language": "^2.1.0",
-    "vitepress": "^1.0.0-rc.36"
+    "resolve-accept-language": "^2.2.0",
+    "vitepress": "^1.0.1"
   },
   "dependencies": {}
 }

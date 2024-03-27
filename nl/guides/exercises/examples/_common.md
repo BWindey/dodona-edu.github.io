@@ -6,8 +6,8 @@ Elke oefening in Dodona komt overeen met een bepaalde map in de oefeningenreposi
 Die map heeft een [vaste structuur](/nl/references/exercise-directory-structure), die we nu zullen maken.
 
 Maak dus eerst een nieuwe map voor de oefening, die we `minimum` zullen noemen.
-Maak daarna, in deze nieuwe map, nog twee mappen:
-- `description`: de map waarin de opgave komt
+Maak daarna, in deze nieuwe map, nog drie mappen:
+- `description`: map waarin de opgave komt
 - `evaluation`: map met informatie over hoe een oplossing beoordeeld moet worden
 - `solution`: map waarin een voorbeeldoplossing komt
 
@@ -36,16 +36,22 @@ Maak het bestand `config.json` in de map `minimum` met de volgende inhoud:
       "nl": "Minimum"
     }
   },
+  "evaluation": {
+    "handler": "tested",
+    "test_suite": "suite.yaml"
+  },
   "programming_language": "python",
   "access": "private"
 }
 ```
 
-In dit bestand worden drie dingen gespecifieerd:
+In dit bestand worden een aantal dingen gespecifieerd:
 
-- De **naam** van de oefening zoals getoond door Dodona in het Nederlands (_nl_) en in het Engels (_en_) (in dit geval zijn beide namen hetzelfde).
-- De **programmeertaal** van de oefening: hier kies je in welke programmeertaal je de oplossingen wilt. In dit geval is dat Python.
-- Het **toegangsniveau**: hier _private_. We kiezen voor een private oefening omdat dit maar een handleiding is, maar we moedigen aan om je oefeningen publiek (_public_) te zetten: dan kunnen andere leerkrachten er ook gebruik van maken (net zoals jij de keuze hebt uit duizenden publieke oefeningen op Dodona).
+- `description.names`: De **namen** van de oefening zoals getoond door Dodona in het Nederlands (_nl_) en in het Engels (_en_). In dit geval zijn de namen gelijk.
+- `evaluation.handler`: We gebruiken TESTed als judge.
+- `evaluation.test_suite`: Het testplan krijgt de naam `suite.yaml`.
+- `programming_language`: De **programmeertaal** van de oefening: hier kies je in welke programmeertaal je de oplossingen wilt. In dit geval is dat Python.
+- `access`: Het **toegangsniveau** is hier _private_. We kiezen voor een private oefening omdat dit maar een handleiding is, maar we moedigen aan om je oefeningen publiek (_public_) te zetten: dan kunnen andere leerkrachten er ook gebruik van maken (net zoals jij de keuze hebt uit duizenden publieke oefeningen op Dodona).
 
 Nadat je dit bestand gemaakt hebt, zal je repository er zo uitzien:
 
@@ -111,6 +117,7 @@ repository/
 
 We willen dat deze oefening automatisch getest wordt.
 Hiervoor moeten we een testplan schrijven, waarin we Dodona vertellen welke testen we allemaal willen uitvoeren.
+Als alle testgevallen geslaagd zijn, is de ingediende oplossing van de student volgens Dodona correct.
 
 In dit geval houden we het testplan kort, met slechts een beperkt aantal testgevallen.
 In een echte oefening wil je waarschijnlijk meer testgevallen voorzien.
