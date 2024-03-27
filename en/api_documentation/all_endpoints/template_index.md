@@ -21,19 +21,19 @@
 
 
 
-| [/courses](https://dodona.be/courses)                                                        | GET, POST               | 3               |
-| [/courses/new](https://dodona.be/courses/new)                                                | GET                     | 2               |
-| /courses/\{course_id\}/activities/\{activity_id\}/inputServiceWorker.js                      | GET                     | 3               |
-| /courses/\{course_id\}/activities/\{id\}                                                     | PUT, PATCH, GET         | 3               |
-| /courses/\{course_id\}/activities/\{id\}/edit                                                | GET                     | 2               |
-| /courses/\{course_id\}/activity_read_states                                                  | GET                     | 3               |
-| /courses/\{course_id\}/exercises/\{id\}                                                      | PUT, PATCH, GET         | 3               |
-| /courses/\{course_id\}/exercises/\{id\}/edit                                                 | GET                     | 2               |
-| /courses/\{course_id\}/members                                                               | GET                     | 2               |
-| /courses/\{course_id\}/members/download_labels_csv                                           | GET                     | 2               |
-| /courses/\{course_id\}/members/upload_labels_csv                                             | POST                    | ?               |
-| /courses/\{course_id\}/members/\{id\}                                                        | PUT, PATCH, GET         | 2               |
-| /courses/\{course_id\}/members/\{id\}/edit                                                   | GET                     | 2               |
+| [/courses](https://dodona.be/courses)                                                        | GET, POST               | 3               | yes |
+| [/courses/new](https://dodona.be/courses/new)                                                | GET                     | 2               | no |
+| /courses/\{course_id\}/activities/\{activity_id\}/inputServiceWorker.js                      | GET                     | 3               | yes |
+| /courses/\{course_id\}/activities/\{id\}                                                     | PUT, PATCH, GET         | 3               | yes |
+| /courses/\{course_id\}/activities/\{id\}/edit                                                | GET                     | 2               | yes |
+| /courses/\{course_id\}/activity_read_states                                                  | GET                     | 3               | yes |
+| /courses/\{course_id\}/exercises/\{id\}                                                      | PUT, PATCH, GET         | 3               | yes |
+| /courses/\{course_id\}/exercises/\{id\}/edit                                                 | GET                     | 2               | yes |
+| /courses/\{course_id\}/members                                                               | GET                     | 2               | yes |
+| /courses/\{course_id\}/members/download_labels_csv                                           | GET                     | 2               | yes |
+| /courses/\{course_id\}/members/upload_labels_csv                                             | POST                    | ?               | no |
+| /courses/\{course_id\}/members/\{id\}                                                        | PUT, PATCH, GET         | 2               | yes |
+| /courses/\{course_id\}/members/\{id\}/edit                                                   | GET                     | 2               | no |
 | /courses/\{course_id\}/series                                                                | GET                     | 3               | :check_mark: |
 | /courses/\{course_id\}/series/new                                                            | GET                     | 2               |
 | /courses/\{course_id\}/series/\{series_id\}/activities/\{activity_id\}/inputServiceWorker.js | GET                     | 3               |
