@@ -1,6 +1,4 @@
-<!-- <PermissionSquares :level="3" /> -->
-
-| Endpoint                                                                                     | Request Methods         |         Privilege Level          |  API accessible   |
+| Endpoint                                                                                     | Request Methods         |         Privilege Level          |   Accessible by   |
 |----------------------------------------------------------------------------------------------|-------------------------|:--------------------------------:|:-----------------:|
 | [/](https://dodona.be/)                                                                      | GET                     | <PermissionSquares :level="3" /> |                   |
 | [/about](https://dodona.be/about)                                                            | GET                     | <PermissionSquares :level="3" /> |                   |
@@ -9,8 +7,8 @@
 | /activities/\{id\}/edit                                                                      | GET                     | <PermissionSquares :level="2" /> |                   |
 | /activities/\{id\}/inputServiceWorker.js                                                     | GET                     | <PermissionSquares :level="3" /> |                   |
 | [/activity_read_states](https://dodona.be/activity_read_states)                              | GET, POST               | <PermissionSquares :level="3" /> |                   |
-| [/annotations](https://dodona.be/annotations)                                                | GET, POST               | <PermissionSquares :level="3" /> |     JSON only     |
-| /annotations/\{id\}                                                                          | GET, PUT, PATCH, DELETE | <PermissionSquares :level="3" /> |     JSON only     |
+| [/annotations](https://dodona.be/annotations)                                                | GET, POST               | <PermissionSquares :level="3" /> |       JSON        |
+| /annotations/\{id\}                                                                          | GET, PUT, PATCH, DELETE | <PermissionSquares :level="3" /> |       JSON        |
 | [/announcements](https://dodona.be/announcements)                                            | GET, POST               | <PermissionSquares :level="1" /> |                   |
 | [/announcements/new](https://dodona.be/announcements/new)                                    | GET                     | <PermissionSquares :level="1" /> |                   |
 | /announcements/\{id\}                                                                        | DELETE, PUT, PATCH      |                ?                 |                   |
@@ -156,21 +154,21 @@
 | /series/\{series_id\}/activities                                                             | GET                     | <PermissionSquares :level="3" /> |                   |
 | /series/\{series_id\}/exercises                                                              | GET                     | <PermissionSquares :level="3" /> |                   |
 | [/stats/cumulative_timeseries](https://dodona.be/stats/cumulative_timeseries)                | GET                     |                X                 |                   |
-| [/stats/heatmap](https://dodona.be/stats/heatmap)                                            | GET                     | <PermissionSquares :level="3" /> |     JSON only     |
-| [/stats/punchcard](https://dodona.be/stats/punchcard)                                        | GET                     | <PermissionSquares :level="3" /> |     JSON only     |
+| [/stats/heatmap](https://dodona.be/stats/heatmap)                                            | GET                     | <PermissionSquares :level="3" /> |       JSON        |
+| [/stats/punchcard](https://dodona.be/stats/punchcard)                                        | GET                     | <PermissionSquares :level="3" /> |       JSON        |
 | [/stats/stacked_status](https://dodona.be/stats/stacked_status)                              | GET                     |                X                 |                   |
 | [/stats/timeseries](https://dodona.be/stats/timeseries)                                      | GET                     |                X                 |                   |
 | [/stats/violin](https://dodona.be/stats/violin)                                              | GET                     |                X                 |                   |
 | [/status](https://dodona.be/status)                                                          | GET                     | <PermissionSquares :level="3" /> | External redirect |
-| [/submissions](https://dodona.be/submissions)                                                | GET, POST               | <PermissionSquares :level="3" /> |   :check_mark:    |
+| [/submissions](https://dodona.be/submissions)                                                | GET, POST               | <PermissionSquares :level="3" /> |    HTML, JSON     |
 | [/submissions/mass_rejudge](https://dodona.be/submissions/mass_rejudge)                      | POST                    | <PermissionSquares :level="1" /> |                   |
-| /submissions/\{id\}                                                                          | GET                     | <PermissionSquares :level="3" /> |   :check_mark:    |
-| /submissions/\{id\}/download                                                                 | GET                     | <PermissionSquares :level="3" /> |                   |
-| /submissions/\{id\}/edit                                                                     | GET                     | <PermissionSquares :level="3" /> |         x         |
-| /submissions/\{id\}/evaluate                                                                 | GET                     | <PermissionSquares :level="2" /> |                   |
-| /submissions/\{id\}/media/*media                                                             | GET                     |                X                 |                   |
-| /submissions/\{submission_id\}/annotations                                                   | GET, POST               | <PermissionSquares :level="3" /> |     JSON only     |     
-| /submissions/\{submission_id\}/annotations/\{id\}                                            | DELETE, PUT, PATCH      |                X                 |                   |
+| /submissions/\{id\}                                                                          | GET                     | <PermissionSquares :level="3" /> |    HTML, JSON     |
+| /submissions/\{id\}/download                                                                 | GET                     | <PermissionSquares :level="3" /> |  Direct download  |
+| /submissions/\{id\}/edit                                                                     | GET                     | <PermissionSquares :level="3" /> |       HTML        |
+| /submissions/\{id\}/evaluate                                                                 | GET                     | <PermissionSquares :level="2" /> |       HTML        |
+| /submissions/\{id\}/media/*media                                                             | GET                     |                ?                 |         ?         |
+| /submissions/\{submission_id\}/annotations                                                   | GET, POST               | <PermissionSquares :level="3" /> |       JSON        |     
+| /submissions/\{submission_id\}/annotations/\{id\}                                            | DELETE, PUT, PATCH      | <PermissionSquares :level="3" /> |       JSON        |
 | [/submitable/submissions](https://dodona.be/submitable/submissions)                          | GET, POST               |                X                 |                   |
 | [/support-us](https://dodona.be/support-us)                                                  | GET                     | <PermissionSquares :level="3" /> |                   |
 | [/toggle_demo_mode](https://dodona.be/toggle_demo_mode)                                      | POST                    | <PermissionSquares :level="2" /> |                   |
@@ -188,7 +186,7 @@
 | /users/\{id\}/impersonate                                                                    | GET                     | <PermissionSquares :level="1" /> |                   |
 | /users/\{id\}/token/\{token\}                                                                | GET                     | <PermissionSquares :level="1" /> |                   |
 | /users/\{user_id\}/activity_read_states                                                      | GET                     | <PermissionSquares :level="3" /> |                   |
-| /users/\{user_id\}/api_tokens                                                                | GET, POST               | <PermissionSquares :level="3" /> |     JSON only     |
+| /users/\{user_id\}/api_tokens                                                                | GET, POST               | <PermissionSquares :level="3" /> |       JSON        |
 | /users/\{user_id\}/submissions                                                               | GET                     | <PermissionSquares :level="3" /> |                   |
 | [/user/users/auth/lti](https://dodona.be/user/users/auth/lti)                                | GET                     |                X                 |                   |
 | [/user/users/saml/auth](https://dodona.be/user/users/saml/auth)                              | POST                    |                X                 |                   |
