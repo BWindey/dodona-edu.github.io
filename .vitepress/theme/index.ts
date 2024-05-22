@@ -1,4 +1,5 @@
 import DefaultTheme from 'vitepress/theme';
+import PermissionSquares from './PermissionSquares.vue';
 import { onMounted, watch, nextTick } from 'vue';
 import { useRoute } from 'vitepress';
 import mediumZoom from 'medium-zoom';
@@ -8,6 +9,9 @@ import './custom.css';
 
 export default {
   ...DefaultTheme,
+  enhanceApp({ app }) {
+    app.component('PermissionSquares', PermissionSquares)
+  },
   setup() {
     const route = useRoute();
     const initZoom = () => {
