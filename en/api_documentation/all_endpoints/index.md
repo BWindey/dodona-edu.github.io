@@ -35,7 +35,7 @@ and the type of content it returns/accepts, is listed.
 | /courses/\{course_id\}/activity_read_states                                                  | GET                     | <PermissionSquares :level="3" /> |                   |
 | /courses/\{course_id\}/exercises/\{id\}                                                      | PUT, PATCH, GET         | <PermissionSquares :level="3" /> |                   |
 | /courses/\{course_id\}/exercises/\{id\}/edit                                                 | GET                     | <PermissionSquares :level="2" /> |                   |
-| /courses/\{course_id\}/members                                                               | GET                     | <PermissionSquares :level="2" /> |                   |
+| /courses/\{course_id\}/members                                                               | GET                     | <PermissionSquares :level="2" /> |     HTML, CSV     |
 | /courses/\{course_id\}/members/download_labels_csv                                           | GET                     | <PermissionSquares :level="2" /> |                   |
 | /courses/\{course_id\}/members/upload_labels_csv                                             | POST                    |                ?                 |                   |
 | /courses/\{course_id\}/members/\{id\}                                                        | PUT, PATCH, GET         | <PermissionSquares :level="2" /> |                   |
