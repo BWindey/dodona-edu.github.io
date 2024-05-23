@@ -12,20 +12,20 @@ Courses are a collection of exercise-series. They are usually made by teachers f
 and allow students to register for them. This page documents every action you can do on courses.
 
 ## Course contents
-Every course has a few attributes. The main useful ones are:
-- id
-- name
-- teacher
-- url (points towards itself)
-- series (points towards list of all exercise-series for the course)
 
-Other attributes are:
-- color (no active use anymore)
-- year
-- visibility (hidden, visible_for_all, visible_for_institutions)
-- registration (closed, open_for_all, open_for_institution)
-- created_at
-- updated_at
+::: details Course body
+- `id`
+- `name`
+- `teacher`
+- `url`: points towards itself
+- `series`: points towards list of all exercise-series for the course
+- `color`: legacy attribute, not used anymore
+- `year`
+- `visibility`: hidden, visible_for_all, visible_for_institutions
+- `registration`: closed, open_for_all, open_for_institution
+- `created_at`
+- `updated_at`
+:::
 
 To get this info from a specific course, you need its id to request 'https://dodona.be/courses/{id}.json':
 ::: code-group
@@ -97,30 +97,34 @@ However, it is (currently) not possible to get a list of all activities.
 It is more useful to view activities inside [series]().
 There is, however, a list available of all read [ContentPages](). 
 You can view all of those via `https://dodona.be/courses/{cours_id}/activity_read_states.json`. 
-Each activity_read_state has the following attributes:
-- created_at
-- id
-- url
-- user
-- course
+
+::: details Activity body
+- `created_at`
+- `id`
+- `url`
+- `user`
+- `course`
+:::
 
 ## Course members
 Users with the right [permissions](../index#permission-levels) (staff or higher) can view all members, 
-users who are registered for that course. Members have a few attributes:
-- id
-- username
-- first_name
-- last_name
-- email
-- status (course_admin, student)
-- labels
-- url
-
-You can view each member separately by appending its id to the link 
+users who are registered for that course.
+It is not possible to get a list of the members in json-format, you can only view each member separately:
 `https://dodona.be/courses/{course_id}/members/{member_id}.json`. 
-This however doesn't provide more info than in the list above.
+
+::: details Member body
+- `id`
+- `username`
+- `first_name`
+- `last_name`
+- `email`
+- `status`: in [course_admin, student]
+- `labels`
+- `url`: self-referencing url
+:::
 
 You can download the list of members as csv from `https://dodona.be/courses/{course_id}/members/download_labels_csv`:
+
 ```python
 import shutil
 
