@@ -1,11 +1,22 @@
+---
+title: All Endpoints
+---
+
+# API-Documentation: All Endpoints
+
+This table provides a list of all available endpoints (parts of url to paste behind `dodona.be`).
+For each endpoint, the available request method, the needed privilege level to access it, 
+and the type of content it returns/accepts, is listed.
+
+
 | Endpoint                                                                                     | Request Methods         |         Privilege Level          |   Accessible by   |
 |----------------------------------------------------------------------------------------------|-------------------------|:--------------------------------:|:-----------------:|
-| [/](https://dodona.be/)                                                                      | GET                     | <PermissionSquares :level="3" /> |                   |
-| [/about](https://dodona.be/about)                                                            | GET                     | <PermissionSquares :level="3" /> |                   |
-| [/activities](https://dodona.be/about)                                                       | GET                     | <PermissionSquares :level="3" /> |   :check_mark:    |
-| /activities/\{id\}                                                                           | PUT, PATCH, GET         | <PermissionSquares :level="3" /> |                   |
-| /activities/\{id\}/edit                                                                      | GET                     | <PermissionSquares :level="2" /> |                   |
-| /activities/\{id\}/inputServiceWorker.js                                                     | GET                     | <PermissionSquares :level="3" /> |                   |
+| [/](https://dodona.be/)                                                                      | GET                     | <PermissionSquares :level="3" /> |    HTML, JSON     |
+| [/about](https://dodona.be/about)                                                            | GET                     | <PermissionSquares :level="3" /> |       HTML        |
+| [/activities](https://dodona.be/about)                                                       | GET                     | <PermissionSquares :level="3" /> |    HTML, JSON     |
+| /activities/\{id\}                                                                           | PUT, PATCH, GET         | <PermissionSquares :level="3" /> |    HTML, JSON     |
+| /activities/\{id\}/edit                                                                      | GET                     | <PermissionSquares :level="2" /> |       HTML        |
+| /activities/\{id\}/inputServiceWorker.js                                                     | GET                     | <PermissionSquares :level="3" /> |    HTML, JSON     |
 | [/activity_read_states](https://dodona.be/activity_read_states)                              | GET, POST               | <PermissionSquares :level="3" /> |                   |
 | [/annotations](https://dodona.be/annotations)                                                | GET, POST               | <PermissionSquares :level="3" /> |       JSON        |
 | /annotations/\{id\}                                                                          | GET, PUT, PATCH, DELETE | <PermissionSquares :level="3" /> |       JSON        |
@@ -169,7 +180,7 @@
 | /submissions/\{id\}/media/*media                                                             | GET                     |                ?                 |         ?         |
 | /submissions/\{submission_id\}/annotations                                                   | GET, POST               | <PermissionSquares :level="3" /> |       JSON        |     
 | /submissions/\{submission_id\}/annotations/\{id\}                                            | DELETE, PUT, PATCH      | <PermissionSquares :level="3" /> |       JSON        |
-| [/submitable/submissions](https://dodona.be/submitable/submissions)                          | GET, POST               |                X                 |                   |
+| [/submitable/submissions](https://dodona.be/submitable/submissions)                          | GET, POST               |                ?                 |                   |
 | [/support-us](https://dodona.be/support-us)                                                  | GET                     | <PermissionSquares :level="3" /> |                   |
 | [/toggle_demo_mode](https://dodona.be/toggle_demo_mode)                                      | POST                    | <PermissionSquares :level="2" /> |                   |
 | [/user/confirm_new_user](https://dodona.be/user/confirm_new_user)                            | GET, POST               |                X                 |                   |
