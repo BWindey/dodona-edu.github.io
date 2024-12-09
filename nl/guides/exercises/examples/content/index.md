@@ -1,11 +1,11 @@
 ---
 title: "Leesactiviteit"
 sidebarTitle: Leesactiviteit
-order: 1
+order: 6
 ---
 
 
-# Oefeningen opstellen: leesactiviteit
+# Leesactiviteit
 
 Als je in de [handleiding](/nl/guides/exercises/creating-exercises/introduction/) de _template repository_ gebruikt hebt, bevat je repository al een oefening en leesactiviteit.
 Hier zullen we nu zelf nog een leesactiviteit toevoegen.
@@ -29,7 +29,7 @@ Maak daarna de map `media` aan in de map `description` waarin de afbeeldingen en
 De map voor deze leesactiviteit moet er als volgt uitzien:
 
 ```
-repository/
+reading-activities//
 └── markdown_demo/
    └── description/
       └── media/
@@ -64,7 +64,7 @@ In dit bestand worden drie dingen gespecifieerd:
 Nadat je dit bestand gemaakt hebt, zal je repository er zo uitzien:
 
 ```
-repository/
+reading-activities//
 └── markdown_demo/
    ├── description/
    |  └── media/
@@ -169,7 +169,7 @@ De inhoud van leesactiviteiten wordt geschreven in Markdown, een redelijk eenvou
 Nadat je deze twee bestanden gemaakt hebt, moet je repository er zo uitzien:
 
 ```
-repository/
+reading-activities//
 └── markdown_demo/
    ├── description/
    |  ├── media/
