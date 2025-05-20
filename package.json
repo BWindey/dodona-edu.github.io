@@ -16,12 +16,13 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "@types/node": "^22.9.3",
+    "@types/node": "^22.15.17",
     "gray-matter": "^4.0.3",
     "markdown-it-imsize": "^2.0.1",
     "medium-zoom": "^1.1.0",
-    "resolve-accept-language": "^3.1.9",
-    "vitepress": "^1.5.0"
+    "resolve-accept-language": "^3.1.11",
+    "vitepress": "^1.6.3"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
 }
